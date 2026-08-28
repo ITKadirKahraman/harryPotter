@@ -1,0 +1,20 @@
+html, body {
+    margin: var(--size-0px);
+    padding: var(--size-0px);
+    width: var(--size-100P);
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: var(--size-100vh);
+    background-color: var(--main-backgroundColor);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: var(--size-1);
+}
