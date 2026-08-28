@@ -1,0 +1,9 @@
+.headerLeft {
+    display: flex;
+    flex-direction: row;
+}
+
+.headerLogo {
+    height: var(--size-48px);
+    width: var(--size-48px);
+}
