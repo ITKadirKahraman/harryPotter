@@ -1,0 +1,32 @@
+:root {
+
+    /*
+    ****** COLORS
+    */
+    --header-backgroundColor: rgb(37,45,62);
+    --header-borderColor: whitesmoke;
+    --main-backgroundColor: gray;
+
+    /*
+    ****** SIZE
+    */
+
+    /* numbers */
+    --size-1: 1;
+
+    /* pixel */
+    --size-0px: 0px;
+    --size-1px: 1px;
+    --size-10px: 10px;
+    --size-20px: 20px;
+    --size-25px: 25px;
+    --size-48px: 48px;
+    --size-60px: 60px;
+    --size-80px: 80px;
+
+    /* procent */
+    --size-100P: 100%;
+
+    /* vh */
+    --size-100vh: 100vh;
+}
