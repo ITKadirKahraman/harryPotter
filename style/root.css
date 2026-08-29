@@ -5,6 +5,8 @@
     */
     --header-backgroundColor: rgb(37,45,62);
     --header-borderColor: whitesmoke;
+    --header-fontHarryYellow: rgb(255,196,1);
+    --header-fontHarryRed: rgb(255, 36, 0);
     --main-backgroundColor: gray;
 
     /*
@@ -17,6 +19,7 @@
     /* pixel */
     --size-0px: 0px;
     --size-1px: 1px;
+    --size-5px: 5px;
     --size-10px: 10px;
     --size-20px: 20px;
     --size-25px: 25px;
