@@ -19,9 +19,17 @@ function getHeader() {
     `;
 }
 
+function getMain() {
+    return `
+        <div class="">
+            
+        </div>
+    `;
+}
+
 function getFooter() {
     return `
         <p class="footerText">Created by Kadir Kahraman</p>
-        <img class="footerLogo" src="./assets/svg/harry.svg" alt="Harry Potter Icon">
+        <img class="footerLogo" src="./assets/svg/hedwig.svg" alt="Hedwig Icon">
     `;
 }
