@@ -1,0 +1,13 @@
+/* card */
+
+.cards {
+    display: flex;
+    position: unset;
+    justify-content: center;
+    align-items: center;
+    height: 148px;
+    width: 96px;
+    background-color: whitesmoke;
+    border: black;
+    border-radius: 25px;
+}
