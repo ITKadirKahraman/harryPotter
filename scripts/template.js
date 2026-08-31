@@ -19,10 +19,13 @@ function getHeader() {
     `;
 }
 
-function getMain() {
+function getMain(index) {
     return `
-        <div class="">
-            
+        <div class="cards">
+            <h4 class="cardHeader">${images[index].name}</h4>
+            <button class="cardBtn">
+                <img src="./assets/svg/${images[index].images}" alt="${images[index].name} Images">
+            </button>
         </div>
     `;
 }
