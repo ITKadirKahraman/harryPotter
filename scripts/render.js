@@ -9,7 +9,11 @@ function renderHeader() {
 }
 
 function renderMain() {
-    return document.getElementById('mainContainer').innerHTML = getMain();
+    let card = document.getElementById('mainContainer');
+    card.innerHTML = "";
+    for (let indexImages = 0; indexImages < images.length; indexImages++) {
+        card.innerHTML += getMain(indexImages);
+    }
 }
 
 function renderFooter() {
