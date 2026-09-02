@@ -22,12 +22,17 @@
     --size-5px: 5px;
     --size-10px: 10px;
     --size-20px: 20px;
+    --size-24px: 24px;
     --size-25px: 25px;
+    --size-30px: 30px;
     --size-48px: 48px;
     --size-60px: 60px;
     --size-80px: 80px;
+    --size-124px: 124px;
+    --size-188px: 188px;
 
     /* procent */
+    --size-10P: 10%;
     --size-100P: 100%;
 
     /* vh */
