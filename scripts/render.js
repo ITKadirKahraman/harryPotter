@@ -1,6 +1,7 @@
 function renderPage() {
     renderHeader();
     renderMain();
+    renderDialog();
     renderFooter();
 }
 
@@ -16,6 +17,10 @@ function renderMain() {
         let category = images[categories[indexImages]][0];
         card.innerHTML += getMain(category);
     }
+}
+
+function renderDialog() {
+    return document.getElementById('dialogContainer').innerHTML = getDialog();
 }
 
 function renderFooter() {
