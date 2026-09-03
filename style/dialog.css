@@ -1,0 +1,8 @@
+.dialogCard {
+    display: flex;
+    height: var(--size-80px);
+    width: var(--size-80px);
+    border: var(--size-2px) solid var(--header-borderColor);
+    border-radius: var(--size-25px);
+    background-color: var(--main-backgroundColor);
+}
