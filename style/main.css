@@ -38,8 +38,3 @@
     background: none;
     cursor: pointer;
 }
-
-img {
-    height: var(--size-48px);
-    width: var(--size-48px);
-}
