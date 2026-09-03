@@ -21,12 +21,19 @@ function getHeader() {
 
 function getMain(category) {
     return `
-        <div class="cards">
-            <h4 class="cardHeader">${category.name}</h4>
-            <button class="cardBtn">
+        <button class="cardBtn">
+            <div class="cards">
+                <h4 class="cardHeader">${category.name}</h4>
                 <img src="./assets/svg/${category.images}.svg" alt="${category.name} Images">
-            </button>
-        </div>
+            </div>
+        </button>
+    `;
+}
+
+function getDialog() {
+    return `
+        <dialog class="dialogCard">
+        </dialog>
     `;
 }
 
