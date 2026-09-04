@@ -1,0 +1,40 @@
+/* container */
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: var(--size-30px);
+    margin: var(--size-10P);
+}
+
+/* card */
+
+.cards {
+    display: flex;
+    position: unset;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: var(--size-10px);
+    height: var(--size-188px);
+    width: var(--size-136px);
+    background-color: rgb(12,143,156);
+    border: black;
+    border-radius: var(--size-25px);
+}
+
+.cardHeader {
+    font-size: var(--size-20px);
+    margin: var(--size-0px);
+    color: white;
+}
+
+/* btn */
+
+.cardBtn {
+    border: none;
+    background: none;
+    cursor: pointer;
+}

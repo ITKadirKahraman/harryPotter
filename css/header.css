@@ -1,0 +1,52 @@
+/* header left */
+.headerLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: var(--size-10px);
+}
+
+.headerLogo {
+    height: var(--size-48px);
+    width: var(--size-48px);
+}
+
+.spanHeader {
+    color: rgb(255,196,1);
+}
+
+h3 {
+    color: var(--header-fontHarryRed);
+}
+
+/* header right */
+
+.headerRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--size-5px);
+}
+
+input {
+    border-radius: var(--size-10px);
+    text-align: center;
+    border: var(--size-1px) solid var(--header-borderColor);
+}
+
+.searchHarry {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.lopu {
+    width: 32px;
+}
+
+select {
+    border-radius: var(--size-10px);
+    text-align: center;
+    border: var(--size-1px) solid var(--header-borderColor);
+}

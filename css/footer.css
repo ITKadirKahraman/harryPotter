@@ -1,0 +1,14 @@
+.footerText {
+    color: var(--header-borderColor);
+    font-size: var(--size-20px);
+    margin: var(--size-0px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footerLogo {
+    height: var(--size-48px);
+    width: var(--size-48px);
+}
