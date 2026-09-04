@@ -5,27 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harry Potter</title>
     <link rel="shortcut icon" href="assets/svg/harryPotter.svg" type="image/x-icon">
-    <link rel="stylesheet" href="style/standard.css">
-    <link rel="stylesheet" href="style/root.css">
-    <link rel="stylesheet" href="style/header.css">
-    <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="style/footer.css">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="css/standard.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body onload="init()">
+    <div class="loader" id="loadingScreen">
+        <img class="loadingHarryPotter" src="./assets/svg/loadingScreen.svg" alt="loading screen">
+    </div>
     <header>
         <div id="headerContainer"></div>
     </header>
     <main>
         <div class="mainContainer" id="mainContainer"></div>
-        <dialog id="dialogContainer"></dialog>
+        <dialog id="dialogContainer">
+            <div class="selectCards" id="selectCards"></div>
+        </dialog>
     </main>
     <footer>
         <div id="footerContainer"></div>
     </footer>
-    <script src="scripts/imagesDB.js"></script>
-    <script src="scripts/template.js"></script>
-    <script src="scripts/render.js"></script>
-    <script src="scripts/script.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/imagesDB.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/localStorage.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
