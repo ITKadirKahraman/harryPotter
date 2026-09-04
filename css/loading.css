@@ -1,0 +1,21 @@
+.loader {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: var(--size-9999);
+}
+
+.loadingHarryPotter {
+    width: var(--size-128px);
+    height: var(--size-128px);
+    animation: loading var(--size-2seconds) linear infinite;
+}
+
+@keyframes loading {
+    to {
+        transform: rotate(var(--size-360deg));
+    }
+}
