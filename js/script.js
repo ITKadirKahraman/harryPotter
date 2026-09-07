@@ -7,36 +7,73 @@ function init() {
     renderPage();
 }
 
-async function openCardsCharacters() {
-    
+async function openCardsCharacters(characters) {
+    showLoading();
+    const dialog = document.getElementById('selectCards');
+    dialog.innerHTML = getDialogWithSmallCardsCharacters(characters);
+    dialog.showModal();
+    await loadCards(characters);
 }
 
-async function openCardsStudents() {
-    
+async function openCardsStudents(characters) {
+    showLoading();
+    const dialog = document.getElementById('selectCards');
+    dialog.innerHTML = getDialogWithSmallCardsStudents(characters);
+    dialog.showModal();
+    await loadCards(characters);
 }
 
-async function openCardsStaff() {
-    
+async function openCardsStaff(characters) {
+    showLoading();
+    const dialog = document.getElementById('selectCards');
+    dialog.innerHTML = getDialogWithSmallCardsStaff(characters);
+    dialog.showModal();
+    await loadCards(characters);
 }
 
-async function openCardsSpells() {
-    
+async function openCardsSpells(characters) {
+    showLoading();
+    const dialog = document.getElementById('selectCards');
+    dialog.innerHTML = getDialogWithSmallCardsSpells(characters);
+    dialog.showModal();
+    await loadCards(characters);
 }
 
-async function openCardsHouseGryffindor() {
-    
+async function openCardsHouseGryffindor(characters) {
+    showLoading();
+    const dialog = document.getElementById('selectCards');
+    dialog.innerHTML = getDialogWithSmallCardsHouseGryffindor(characters);
+    dialog.showModal();
+    await loadCards(characters);
 }
 
-async function openCardsHouseSlytherin() {
-    
+async function openCardsHouseSlytherin(characters) {
+    showLoading();
+    const dialog = document.getElementById('selectCards');
+    dialog.innerHTML = getDialogWithSmallCardsHouseSlytherin(characters);
+    dialog.showModal();
+    await loadCards(characters);
 }
 
-async function openCardsHouseRavenclaw() {
-    
+async function openCardsHouseRavenclaw(characters) {
+    showLoading();
+    const dialog = document.getElementById('selectCards');
+    dialog.innerHTML = getDialogWithSmallCardsHouseRavenclaw(characters);
+    dialog.showModal();
+    await loadCards(characters);
 }
 
-async function openCardsHouseHufflepuff() {
-    
+async function openCardsHouseHufflepuff(characters) {
+    showLoading();
+    const dialog = document.getElementById('selectCards');
+    dialog.innerHTML = getDialogWithSmallCardsHouseHufflepuff(characters);
+    dialog.showModal();
+    await loadCardsHufflepuff(characters);
+}
+
+async function loadCardsHufflepuff(characters) {
+    const hufflepuff = await fetch(characters.house.hufflepuff);
+    const huffleCard = await hufflepuff.json();
 }
 
 async function loadCards(characters) {
