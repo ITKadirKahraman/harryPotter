@@ -1,4 +1,5 @@
 function renderPage() {
+    showLoading();
     renderHeader();
     renderMain();
     renderDialog();
