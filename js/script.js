@@ -106,3 +106,13 @@ async function renderDialog() {
     dialog.innerHTML = getDialogPokemonCard(pokemon);
     await loadEvolutionChain(pokemon);
 }
+
+function updateLayout() {
+    let categories = Object.keys(images);
+    for (let indexImages = 0; indexImages < categories.length; indexImages++) {
+        let category = images[categories[indexImages]][0];
+        if(categories.length > 2){
+            category.classList.add("grindLayout");
+        }
+    }
+}
