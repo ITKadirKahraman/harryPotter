@@ -1,0 +1,12 @@
+@media (max-width: 900px) {
+    .mainContainer {
+        flex-direction: column;
+        gap: var(--size-10px);
+        margin: var(--size-10P);
+    }
+
+    .cardBtn {
+        gap: var(--size-10px);
+        margin: var(--size-10P);
+    }
+}
