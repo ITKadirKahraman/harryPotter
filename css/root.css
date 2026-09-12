@@ -8,6 +8,7 @@
     --header-fontHarryYellow: rgb(255,196,1);
     --header-fontHarryRed: rgb(255, 36, 0);
     --main-backgroundColor: rgb(41,49,51);
+    --card-backgroundColor: rgb(12,143,156);
 
     /*
     ****** SIZE
@@ -23,6 +24,7 @@
     --size-2px: 2px;
     --size-5px: 5px;
     --size-10px: 10px;
+    --size-16px: 16px;
     --size-20px: 20px;
     --size-24px: 24px;
     --size-25px: 25px;
@@ -37,6 +39,8 @@
 
     /* procent */
     --size-10P: 10%;
+    --size-15P: 15%;
+    --size-25P: 25%;
     --size-80P: 80%;
     --size-100P: 100%;
 
