@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     gap: var(--size-30px);
     margin: var(--size-10P);
 }
@@ -20,7 +20,7 @@
     gap: var(--size-10px);
     height: var(--size-188px);
     width: var(--size-136px);
-    background-color: rgb(12,143,156);
+    background-color: var(--card-backgroundColor);
     border: black;
     border-radius: var(--size-25px);
 }
@@ -37,4 +37,14 @@
     border: none;
     background: none;
     cursor: pointer;
+}
+
+/* grid layout */
+
+.grindLayout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--size-20px);
+    margin: 0 auto;
 }
