@@ -8,8 +8,8 @@ function getHeader() {
         </div>
         <div class="headerRight">
             <input type="text" id="harryInput" placeholder="Search..." onkeydown="">
-            <button class="searchHarry" onlcick="searchHarry()"><img class="lopu" src="./assets/svg/lopu.svg" alt="Lopu"></button>
-            <select id="typeFilter" onchange="filterTypeKategorie()">
+            <button class="searchHarry" onclick="searchHarry()"><img class="lopu" src="./assets/svg/lopu.svg" alt="Lopu"></button>
+            <select id="typeFilter">
                 <option value="all">all Categories</option>
                 <option value="characters">Characters</option>
                 <option value="students">Students</option>
@@ -25,7 +25,7 @@ function getHeader() {
 
 function getMain(category) {
     return `
-        <button class="cardBtn">
+        <button class="cardBtn" onclick="openCategory('${category.name}')">
             <div class="cards">
                 <h4 class="cardHeader">${category.name}</h4>
                 <img src="./assets/svg/${category.images}.svg" alt="${category.name} Images">
@@ -36,7 +36,7 @@ function getMain(category) {
 
 /*  CARDS  */
 
-function getDialogWithSmallCardsCharacters(characters) {
+function getCharacterCard(characters) {
     return `
         <li>
             <div class="cardsHeader">
@@ -52,33 +52,33 @@ function getDialogWithSmallCardsCharacters(characters) {
     `;
 }
 
-function getDialogWithSmallCardsStudents(characters) {
+function getStudentsCard(characters) {
     return `
         <li>
             <div class="cardsHeader">
-                <h3>${characters.students.name}</h3>
+                <h3>${characters.name}</h3>
             </div>
             <div class="cardsMiddle">
-                <img class="smallCardsImage" src="${characters.students.image}" alt="${characters.students.name} Image"> 
+                <img class="smallCardsImage" src="${characters.image}" alt="${characters.name} Image"> 
             </div>
             <div class="cardsBottom">
-                <h4>${characters.students.house}</h4>
+                <h4>${characters.house}</h4>
             </div>
         </li>
     `;
 }
 
-function getDialogWithSmallCardsStaff(characters) {
+function getStaffCard(characters) {
     return `
         <li>
             <div class="cardsHeader">
-                <h3>${characters.staff.name}</h3>
+                <h3>${characters.name}</h3>
             </div>
             <div class="cardsMiddle">
-                <img class="smallCardsImage" src="${characters.staff.image}" alt="${characters.staff.name} Image"> 
+                <img class="smallCardsImage" src="${characters.image}" alt="${characters.name} Image"> 
             </div>
             <div class="cardsBottom">
-                <h4>${characters.staff.house}</h4>
+                <h4>${characters.house}</h4>
             </div>
         </li>
     `;
