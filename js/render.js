@@ -2,16 +2,15 @@ function renderPage() {
     showLoading();
     renderHeader();
     renderMain();
-    renderDialog();
     renderFooter();
 }
 
 function renderHeader() {
-    return document.getElementById('headerContainer').innerHTML = getHeader();
+    document.getElementById('headerContainer').innerHTML = getHeader();
 }
 
 function renderMain() {
-    let card = document.getElementById('mainContainer');
+    let card = document.getElementById('categoryContainer');
     card.innerHTML = "";
     let categories = Object.keys(images);
     for (let indexImages = 0; indexImages < categories.length; indexImages++) {
@@ -20,10 +19,6 @@ function renderMain() {
     }
 }
 
-function renderDialog() {
-    return document.getElementById('dialogContainer').innerHTML = getDialogWithSmallCards();
-}
-
 function renderFooter() {
-    return document.getElementById('footerContainer').innerHTML = getFooter();
+    document.getElementById('footerContainer').innerHTML = getFooter();
 }
