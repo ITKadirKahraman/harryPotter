@@ -76,43 +76,53 @@ async function loadCardsHufflepuff(characters) {
     const huffleCard = await hufflepuff.json();
 }
 
-async function loadCards(characters) {
-    const speciesResponse = await fetch(pokemon.species.url);
-    const speciesData = await speciesResponse.json();
-
-    const evolutionResponse = await fetch(speciesData.evolution_chain.url);
-    const evolutionData = await evolutionResponse.json();
-
-    const names = getEvolutionNames(evolutionData.chain);
-
-    const container =
-        document.getElementById(`evolutionChain${pokemon.id}`);
-
-    container.innerHTML = "";
-
-    for (const name of names) {
-
-        const response = await fetch(BASE_URL + name);
-
-        const evolutionPokemon = await response.json();
-
-        container.innerHTML += evolutionChain(evolutionPokemon);
-    }
-}
-
-async function renderDialog() {
-    const dialog = document.getElementById('dialog');
-    const pokemon = allPokemons[currentIndex];
-    dialog.innerHTML = getDialogPokemonCard(pokemon);
-    await loadEvolutionChain(pokemon);
-}
-
 function updateLayout() {
     let categories = Object.keys(images);
     for (let indexImages = 0; indexImages < categories.length; indexImages++) {
         let category = images[categories[indexImages]][0];
-        if(categories.length > 2){
+        if(categories.length > 3){
             category.classList.add("grindLayout");
         }
+    }
+}
+
+function openCategory(category) {
+    console.log("Kategorie angeklickt:", category);
+    if( category === "Characters") {
+        loadCharacters();
+    } else if ( category === "Students") {
+        loadStudents();
+    }else if (category === "Staff") {
+        loadStaff();
+    }
+}
+
+async function loadCharacters() {
+    const response = await fetch(CHARACTER_URL);
+    const characters = await response.json();
+    const contentContainer = document.getElementById("contentContainer");
+    contentContainer.innerHTML = "";
+    for (let index = 0; index < characters.length; index++) {
+        contentContainer.innerHTML += getCharacterCard(characters[index]);
+    }
+}
+
+async function loadStudents() {
+    const response = await fetch(STUDENTS_URL);
+    const students = await response.json();
+    const contentContainer = document.getElementById('contentContainer');
+    contentContainer.innerHTML = "";
+    for (let index = 0; index < students.length; index++) {
+        contentContainer.innerHTML += getStudentsCard(students[index]);
+    }
+}
+
+async function loadStaff() {
+    const response = await fetch(STAFF_URL);
+    const staff = await response.json();
+    const contentContainer = document.getElementById('contentContainer');
+    contentContainer.innerHTML = "";
+    for (let index = 0; index < staff.length; index++) {
+        contentContainer.innerHTML += getStaffCard(staff[index]);    
     }
 }
