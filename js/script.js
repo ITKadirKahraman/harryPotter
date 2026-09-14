@@ -7,75 +7,6 @@ function init() {
     renderPage();
 }
 
-async function openCardsCharacters(characters) {
-    showLoading();
-    const dialog = document.getElementById('selectCards');
-    dialog.innerHTML = getDialogWithSmallCardsCharacters(characters);
-    dialog.showModal();
-    await loadCards(characters);
-}
-
-async function openCardsStudents(characters) {
-    showLoading();
-    const dialog = document.getElementById('selectCards');
-    dialog.innerHTML = getDialogWithSmallCardsStudents(characters);
-    dialog.showModal();
-    await loadCards(characters);
-}
-
-async function openCardsStaff(characters) {
-    showLoading();
-    const dialog = document.getElementById('selectCards');
-    dialog.innerHTML = getDialogWithSmallCardsStaff(characters);
-    dialog.showModal();
-    await loadCards(characters);
-}
-
-async function openCardsSpells(characters) {
-    showLoading();
-    const dialog = document.getElementById('selectCards');
-    dialog.innerHTML = getDialogWithSmallCardsSpells(characters);
-    dialog.showModal();
-    await loadCards(characters);
-}
-
-async function openCardsHouseGryffindor(characters) {
-    showLoading();
-    const dialog = document.getElementById('selectCards');
-    dialog.innerHTML = getDialogWithSmallCardsHouseGryffindor(characters);
-    dialog.showModal();
-    await loadCards(characters);
-}
-
-async function openCardsHouseSlytherin(characters) {
-    showLoading();
-    const dialog = document.getElementById('selectCards');
-    dialog.innerHTML = getDialogWithSmallCardsHouseSlytherin(characters);
-    dialog.showModal();
-    await loadCards(characters);
-}
-
-async function openCardsHouseRavenclaw(characters) {
-    showLoading();
-    const dialog = document.getElementById('selectCards');
-    dialog.innerHTML = getDialogWithSmallCardsHouseRavenclaw(characters);
-    dialog.showModal();
-    await loadCards(characters);
-}
-
-async function openCardsHouseHufflepuff(characters) {
-    showLoading();
-    const dialog = document.getElementById('selectCards');
-    dialog.innerHTML = getDialogWithSmallCardsHouseHufflepuff(characters);
-    dialog.showModal();
-    await loadCardsHufflepuff(characters);
-}
-
-async function loadCardsHufflepuff(characters) {
-    const hufflepuff = await fetch(characters.house.hufflepuff);
-    const huffleCard = await hufflepuff.json();
-}
-
 function updateLayout() {
     let categories = Object.keys(images);
     for (let indexImages = 0; indexImages < categories.length; indexImages++) {
@@ -89,40 +20,61 @@ function updateLayout() {
 function openCategory(category) {
     console.log("Kategorie angeklickt:", category);
     if( category === "Characters") {
+        showLoading();
         loadCharacters();
     } else if ( category === "Students") {
+        showLoading();
         loadStudents();
     }else if (category === "Staff") {
+        showLoading();
         loadStaff();
+    }else if(category === "Spells") {
+        showLoading();
+        loadSpells();
+    }else if(category === "House") {
+        loadHouseContainer();
     }
 }
 
-async function loadCharacters() {
-    const response = await fetch(CHARACTER_URL);
-    const characters = await response.json();
-    const contentContainer = document.getElementById("contentContainer");
-    contentContainer.innerHTML = "";
-    for (let index = 0; index < characters.length; index++) {
-        contentContainer.innerHTML += getCharacterCard(characters[index]);
-    }
-}
-
-async function loadStudents() {
-    const response = await fetch(STUDENTS_URL);
-    const students = await response.json();
+function deleteContentContainer() {
     const contentContainer = document.getElementById('contentContainer');
     contentContainer.innerHTML = "";
-    for (let index = 0; index < students.length; index++) {
-        contentContainer.innerHTML += getStudentsCard(students[index]);
+}
+
+function loadHouseContainer() {
+    deleteContentContainer();
+    let card = document.getElementById('houseContainer');
+    card.innerHTML = "";
+    let houses = Object.keys(house);
+    for (let indexImages = 0; indexImages < houses.length; indexImages++) {
+        let hou = house[houses[indexImages]][0];
+        card.innerHTML += getHouseCards(hou);
     }
 }
 
-async function loadStaff() {
-    const response = await fetch(STAFF_URL);
-    const staff = await response.json();
-    const contentContainer = document.getElementById('contentContainer');
-    contentContainer.innerHTML = "";
-    for (let index = 0; index < staff.length; index++) {
-        contentContainer.innerHTML += getStaffCard(staff[index]);    
+function openHouse(houseName) {
+    if (houseName === "Gryffindor") {
+        showLoading();
+        loadHouseGryffindor();
+    }else if(houseName === "Hufflepuff") {
+        showLoading();
+        loadHouseHufflepuff();
+    }else if(houseName === "Ravenclaw") {
+        showLoading();
+        loadHouseRavenclaw();
+    }else if(houseName === "Slytherin") {
+        showLoading();
+        loadHouseSlytherin();
+    }
+}
+
+function loadHouse() {
+    let house = document.getElementById('house');
+    house.innerHTML = "";
+    const houses = Object.keys(house);
+    for (let index = 0; index < houses.length; index++) {
+        const houseName = houses[index];
+        const houseData = house[houseName[0]];
+        house.innerHTML += getHouseCards(houseData);
     }
 }
