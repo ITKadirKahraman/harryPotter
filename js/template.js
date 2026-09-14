@@ -84,7 +84,7 @@ function getStaffCard(characters) {
     `;
 }
 
-function getDialogWithSmallCardsSpells(spells) {
+function getSpellsCard(spells) {
     return `
         <li>
             <div class="cardsHeader">
@@ -98,53 +98,64 @@ function getDialogWithSmallCardsSpells(spells) {
     `;
 }
 
-function getDialogWithSmallCardsHouseGryffindor(characters) {
+function getHouseCards(house) {
+    return `
+        <button class="cardBtn" onclick="openHouse('${house.name}')">
+            <div class="cards">
+                <h4 class="cardHeader">${house.name}</h4>
+                <img src="./assets/svg/${house.images}.svg" alt="${house.name} Images">
+            </div>
+        </button>
+    `;
+}
+
+function getHouseGryffindor(characters) {
     return `
         <li>
-            <div class="cardsHeader">
-                <h3>${characters.house.gryffindor.name}</h3>
+            <div class="cardsHeader" onclick="loadHouse()">
+                <h3>${characters.name}</h3>
             </div>
             <div class="cardsMiddle">
-                <img class="smallCardsImage" src="${characters.house.image}" alt="${characters.staff.name} Image"> 
+                <img class="smallCardsImage" src="${characters.image}" alt="${characters.name} Image"> 
             </div>
         </li>
     `;
 }
 
-function getDialogWithSmallCardsHouseSlytherin(characters) {
+function getHouseSlytherin(characters) {
     return `
         <li>
             <div class="cardsHeader">
-                <h3>${characters.house.slytherin.name}</h3>
+                <h3>${characters.name}</h3>
             </div>
             <div class="cardsMiddle">
-                <img class="smallCardsImage" src="${characters.house.slytherin.image}" alt="${characters.staff.slytherin.name} Image"> 
+                <img class="smallCardsImage" src="${characters.image}" alt="${characters.name} Image"> 
             </div>
         </li>
     `;
 }
 
-function getDialogWithSmallCardsHouseRavenclaw(characters) {
+function getHouseRavenclaw(characters) {
     return `
         <li>
             <div class="cardsHeader">
-                <h3>${characters.house.ravenclaw.name}</h3>
+                <h3>${characters.name}</h3>
             </div>
             <div class="cardsMiddle">
-                <img class="smallCardsImage" src="${characters.house.ravenclaw.image}" alt="${characters.staff.ravenclaw.name} Image"> 
+                <img class="smallCardsImage" src="${characters.image}" alt="${characters.name} Image"> 
             </div>
         </li>
     `;
 }
 
-function getDialogWithSmallCardsHouseHufflepuff(characters) {
+function getHouseHufflepuff(characters) {
     return `
         <li>
             <div class="cardsHeader">
-                <h3>${characters.house.hufflepuff.name}</h3>
+                <h3>${characters.name}</h3>
             </div>
             <div class="cardsMiddle">
-                <img class="smallCardsImage" src="${characters.house.hufflepuff.image}" alt="${characters.staff.hufflepuff.name} Image"> 
+                <img class="smallCardsImage" src="${characters.image}" alt="${characters.name} Image"> 
             </div>
         </li>
     `;
