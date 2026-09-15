@@ -10,7 +10,20 @@
         gap: var(--size-10px);
         margin: var(--size-10px);
     }
+
+    .house,
+    .contentContainer {
+        grid-template-columns: repeat(3, 200px);
+    }
 }
+
+@media (max-width: 650px) {
+    .house,
+    .contentContainer {
+        grid-template-columns: repeat(2, 200px);
+    }
+}
+
 
 @media (max-width: 580px) {
     select {
@@ -33,8 +46,13 @@
         display: none;
     }
 
-    h3 {
+    .h3Header {
         display: none;
+    }
+
+    .house,
+    .contentContainer {
+        grid-template-columns: repeat(1, 200px);
     }
 }
 
