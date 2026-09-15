@@ -16,7 +16,7 @@
     color: rgb(255,196,1);
 }
 
-h3 {
+.h3Header {
     color: var(--header-fontHarryRed);
 }
 
