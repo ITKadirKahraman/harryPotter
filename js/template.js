@@ -4,7 +4,7 @@ function getHeader() {
     return `
         <div class="headerLeft">
             <img class="headerLogo" src="./assets/svg/broom.svg" alt="Besen">
-            <h3><span class="spanHeader">Harry Potter</span> World</h3>
+            <h3 class="h3Header"><span class="spanHeader">Harry Potter</span> World</h3>
         </div>
         <div class="headerRight">
             <input type="text" id="harryInput" placeholder="Search..." onkeydown="">
@@ -103,7 +103,7 @@ function getHouseCards(house) {
         <button class="cardBtn" onclick="openHouse('${house.name}')">
             <div class="cards">
                 <h4 class="cardHeader">${house.name}</h4>
-                <img src="./assets/svg/${house.images}.svg" alt="${house.name} Images">
+                <img src="./assets/house/${house.images}.png" alt="${house.name} Images">
             </div>
         </button>
     `;
