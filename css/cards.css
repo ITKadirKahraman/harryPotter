@@ -1,13 +1,48 @@
-.selectCards {
-    display: flex;
-    position: unset;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    gap: var(--size-10px);
-    height: var(--size-188px);
-    width: var(--size-136px);
+li {
+    list-style-type: none;
+    height: var(--size-250px);
+    width: var(--size-200px);
     background-color: var(--card-backgroundColor);
-    border: black;
     border-radius: var(--size-25px);
+}
+
+.house,
+.contentContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    justify-content: center;
+    gap: var(--size-10px);
+}
+
+h3 {
+    font-size: var(--size-16px);
+    margin: var(--size-0px);
+    text-align: center;
+    color: var(--header-fontColor);
+    margin: var(--size-0px) var(--size-0px) var(--size-5px) var(--size-0px);
+}
+
+.cardsMiddle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.smallCardsImage {
+    display: flex;
+    height: var(--size-200px);
+    width: var(--size-150px);
+    border-radius: var(--size-25px);
+}
+
+h4 {
+    color: var(--header-fontColor);
+    margin:  var(--size-5px) var(--size-0px) var(--size-0px) var(--size-0px);
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: var(--size-14px);
 }
