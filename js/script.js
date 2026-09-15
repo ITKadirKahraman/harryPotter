@@ -11,8 +11,8 @@ function updateLayout() {
     let categories = Object.keys(images);
     for (let indexImages = 0; indexImages < categories.length; indexImages++) {
         let category = images[categories[indexImages]][0];
-        if(categories.length > 3){
-            category.classList.add("grindLayout");
+        if(categories.length > 4){
+           category = document.getElementById('contentContainer');
         }
     }
 }
@@ -21,17 +21,26 @@ function openCategory(category) {
     console.log("Kategorie angeklickt:", category);
     if( category === "Characters") {
         showLoading();
+        deleteHouseContainer();
+        deleteHouse();
         loadCharacters();
     } else if ( category === "Students") {
         showLoading();
+        deleteHouseContainer();
+        deleteHouse();
         loadStudents();
     }else if (category === "Staff") {
         showLoading();
+        deleteHouseContainer();
+        deleteHouse();
         loadStaff();
     }else if(category === "Spells") {
         showLoading();
+        deleteHouseContainer();
+        deleteHouse();
         loadSpells();
     }else if(category === "House") {
+        deleteContentContainer();
         loadHouseContainer();
     }
 }
@@ -39,6 +48,16 @@ function openCategory(category) {
 function deleteContentContainer() {
     const contentContainer = document.getElementById('contentContainer');
     contentContainer.innerHTML = "";
+}
+
+function deleteHouseContainer() {
+    const houseContainer = document.getElementById('houseContainer');
+    houseContainer.innerHTML = "";
+}
+
+function deleteHouse() {
+    const house = document.getElementById('house');
+    house.innerHTML = "";
 }
 
 function loadHouseContainer() {
