@@ -97,3 +97,18 @@ function loadHouse() {
         house.innerHTML += getHouseCards(houseData);
     }
 }
+
+function filterType() {
+    const selectedType = document.getElementById('typeFilter').value;
+    if (selectedType === "characters") {
+        loadCharacters();
+    }else if(selectedType === "students") {
+        loadStudents();
+    }else if(selectedType === "staff") {
+        loadStaff();
+    }else if(selectedType === "house") {
+        loadHouseContainer()
+    }else if(selectedType === "spells") {
+        loadSpells();
+    }
+}
