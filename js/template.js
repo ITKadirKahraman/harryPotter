@@ -9,8 +9,7 @@ function getHeader() {
         <div class="headerRight">
             <input type="text" id="harryInput" placeholder="Search..." onkeydown="">
             <button class="searchHarry" onclick="searchHarry()"><img class="lopu" src="./assets/svg/lopu.svg" alt="Lopu"></button>
-            <select id="typeFilter">
-                <option value="all">all Categories</option>
+            <select id="typeFilter" onchange="filterType()">
                 <option value="characters">Characters</option>
                 <option value="students">Students</option>
                 <option value="staff">Staff</option>
